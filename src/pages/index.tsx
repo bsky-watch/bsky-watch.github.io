@@ -18,7 +18,9 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <Link className="button button--secondary button--lg" href="/docs">Дізнатися більше</Link>
+        <Link className="button button--secondary button--lg" href="/docs">
+          <Translate id="index.docsLinkLabel">Дізнатися більше</Translate>
+        </Link>
       </div>
     </header>
   );
