@@ -1,0 +1,10 @@
+{
+  "title": {
+    "message": "bsky.watch",
+    "description": "The title in the navbar"
+  },
+  "item.label.Інформація": {
+    "message": "Info",
+    "description": "Navbar item with label Інформація"
+  }
+}
