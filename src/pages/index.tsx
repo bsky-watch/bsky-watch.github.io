@@ -7,6 +7,7 @@ import Heading from "@theme/Heading";
 import Translate, { translate } from '@docusaurus/Translate';
 
 import Text from './_index.md';
+import TextEn from '@site/i18n/en/docusaurus-plugin-content-pages/_index.md';
 import styles from "./index.module.css";
 
 function HomepageHeader() {
@@ -27,7 +28,7 @@ function HomepageHeader() {
 }
 
 export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
+  const { siteConfig, i18n } = useDocusaurusContext();
   return (
     <Layout title={`${siteConfig.title}`}>
       <HomepageHeader />
@@ -36,7 +37,15 @@ export default function Home(): JSX.Element {
           <div className="container">
             <div className="row">
               <div className={clsx('col col--6 col--offset-3 padding-top--lg')}>
-                <Text />
+                {(() => {
+                  switch (i18n.currentLocale) {
+                    case 'en':
+                      return <TextEn />
+                    case 'uk':
+                    default:
+                      return <Text />
+                  }
+                })()}
               </div>
             </div>
           </div>
