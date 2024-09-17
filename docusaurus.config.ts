@@ -65,6 +65,11 @@ const config: Config = {
           type: 'localeDropdown',
           position: 'right',
         },
+        {
+          html: '<svg style="height: 1.5rem; width: 1.5rem; vertical-align: middle"><use href="/icons/matrix.svg#img"></use></svg>',
+          href: "https://matrix.to/#/#public:bsky.watch",
+          position: "right",
+        },
       ],
     },
     footer: {
